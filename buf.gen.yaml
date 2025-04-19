@@ -1,0 +1,11 @@
+version: v2
+plugins:
+  - remote: buf.build/grpc/go:v1.5.1
+    out: go/grpc/gen
+  - remote: buf.build/protocolbuffers/go:v1.31.0
+    out: go/grpc/gen
+managed:
+  enabled: true
+  override:
+    - file_option: go_package
+      value: service/test
